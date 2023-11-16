@@ -14,3 +14,7 @@ Oppgave 3:
     I koden benyttes modulen xml.etree.ElementTree for å bygge opp xml. For å kjøre webservicen må man først kjøre flask run på appy.py, dette vil starte serveren på 127.0.0.1:5000 (localhost port 5000). Dette er viktig for å kunne teste API'et. Deretter må det åpnes en ny kommandlinje som kjører Oppgave_3_API_Test.py. Hvis ikke dette gjøres vil API'et feile. API-testen er laget for å teste både JSON format og XML format, samt at brukeren kan velge hvilken ID som skal testes. 
 
     Oppgave_2.py importeres i begge filene til oppgave 3 hvor både class og functions blir brukt. Det er også brukt virtual environment for Flask.
+
+
+
+Oppgave_2_Draft inneholder første utkast av oppgave 2, samt en løsning med bruk av fhrclient i python. Dette for å vise at det er flere måter å koble til API'et på.
