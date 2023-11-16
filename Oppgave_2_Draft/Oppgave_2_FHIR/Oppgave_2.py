@@ -24,11 +24,11 @@ def main(server):
     
     try:
         pasient = fhirSporring(id)
-        print(f"navn: {pasient.name[0].given}")
+        print(f"navn: {pasient.name[0].given[0]}")
         print(f"Kjønn: {pasient.gender}")
         try:
-            print(f"Fødselsdato: {datetime.strptime(pasient.birthDate, '%Y-%M-%d').strftime('%d.%m.%Y')}")
-            print(f"Alder: {math.floor((datetime.now()-datetime.strptime(pasient.birthDate, '%Y-%M-%d')).days/365)}")
+            print(f"Fødselsdato: {datetime.strptime(pasient.birthDate.isostring, '%Y-%M-%d').strftime('%d.%m.%Y')}")
+            print(f"Alder: {math.floor((datetime.now()-datetime.strptime(pasient.birthDate.isostring, '%Y-%M-%d')).days/365)}")
         except Exception as err:
             print(f"Fødselsdato ikke definert. Feilmelding: {err}")
     except Exception as err:
