@@ -17,7 +17,7 @@ class Pasient:
         # Konverter string til datetime
         tempDato = datetime.strptime(self.fodselsDato,"%Y-%m-%d")
         # Finn alder på pasient
-        return math.floor((datetime.now()-tempDato).days/365)
+        return str(math.floor((datetime.now()-tempDato).days/365))
 
     def konverterDato(self):
         if self.fodselsDato == "":
